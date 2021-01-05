@@ -8,7 +8,7 @@
 
     <script src="https://apis.google.com/js/platform.js" async defer></script>
     <meta name="google-signin-client_id"
-        content="254268924418-4l9ih03gpph8k9aq3vara1r0mj14dkhf.apps.googleusercontent.com">
+        content="254268924418-1oiioppctvg76746bgamg8vua5qnb7mo.apps.googleusercontent.com">
 
 </head>
 
@@ -33,7 +33,9 @@
             console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
 
             var id_token = googleUser.getAuthResponse().id_token;
+
             console.log(id_token);
+
             var xhr = new XMLHttpRequest();
             xhr.open('POST', '/google');
             xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
